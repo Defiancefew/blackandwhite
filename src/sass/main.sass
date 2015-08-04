@@ -1,0 +1,324 @@
+%wrapper
+	max-width: 1200px
+	margin: 0 auto
+
+.header
+	&__wrapper
+		@extend %wrapper
+		position: relative
+	&__topline
+		min-height: 54px
+		+cf
+	&__nav
+		width: 42.9166666%
+		float: left
+	li
+		display: inline-block
+		margin-right: 45px
+		&:last-child
+			margin-right: 0
+	a
+		line-height: 54px
+		display: block
+		text-decoration: none
+		color: #010101
+		font-family: "Roboto-Regular"
+		font-size: 13px
+		border-bottom: 2px solid transparent
+		&:hover
+			border-bottom: 2px solid black
+	&__logo
+		@extend .icon-logo
+		+vcr
+	&__logo-wrap
+		width: 14.166666%
+		float: left
+		position: relative
+	&__list-left
+		float: right
+	&__main
+		text-align: center
+		width: 100%
+		background-color: white
+		margin-top: 300px
+	&__heading
+		color: #1D1E1F
+		font-family: "HelveticaNeueLTPro"
+		font-size: 44px
+		line-height: 44px
+	&__subheading
+		margin-top: 17px
+		color: #898888
+		font-family: "Merriweather-LightItalic"
+		font-size: 16px
+		font-style: italic
+		line-height: 16px
+	&__button
+		width: 188px
+		height: 57px
+		border: 1px solid #000
+		background-color: white
+		color: #000
+		font-family: "Montserrat-Regular"
+		font-size: 13px
+		line-height: 13px
+		margin-top: 50px
+		margin-bottom: 380px
+		transition: 0.4s
+		border-radius: 4px
+		&:hover
+			background-color: black
+			color: white
+	&__dots
+		position: absolute
+		bottom: 0
+		@extend .icon-point
+		left: 50%
+		transform: translateX(-50%)
+		margin-bottom: 40px
+
+.timeline
+	height: 1400px
+	background-color: #1D1D1D
+	background-image: url(../img/timeline-bg.png)
+	background-repeat: no-repeat
+	background-position: center 1138px
+	position: relative
+	&__wrapper
+		@extend %wrapper
+	&__center
+		background-color: white
+		margin: 0 auto
+		width: 5px
+		height: 100%
+		position: absolute
+		left: 50%
+		transform: translateX(-50%)
+	&__left
+		max-width: 500px
+		float: left
+	&__right
+		max-width: 500px
+		float: right
+	&__info
+		color: #B7B7B7
+		font-family: "Montserrat-light"
+		font-size: 15px
+	&__heading
+		color: #FEFEFE
+		font-family: "HelveticaNeueLTPro-Md"
+		font-size: 48px
+	&__text1
+		margin-top: 150px
+		margin-left: 10.83%
+		text-align: right
+	&__text3
+		margin-top: 250px
+		margin-left: 10.83%
+		text-align: right
+	&__text2
+		margin-top: 270px
+		margin-right:  10.83%
+	&__text4
+		margin-top: 350px
+		margin-right: 10.83%
+	@each $s in first,second,fourth
+		&__round-small--#{$s}
+			@extend .icon-round-small
+			position: absolute
+			left: 50%
+			transform: translateX(-50%)
+	&__round-small--first
+		top: 170px
+	&__round-small--second
+		top: 295px
+	&__round-big--third
+		@extend .icon-round-big
+		position: absolute
+		left: 50%
+		transform: translateX(-50%)
+		top: 517px
+	&__round-small--fourth
+		top: 793px
+
+.team
+	height: 750px
+	background-color: white
+	width: 100%
+	z-index: 9999
+	transform: skewY(-7deg)
+	position: relative
+	top: 150px
+	&__wrapper
+		@extend %wrapper
+		position: relative
+		transform: skewY(7deg)
+	&__tile
+		margin-top: 220px
+		text-align: center
+		width: 33%
+		float: left
+		&:nth-child(2)
+			position: relative
+			top: -90px
+	&__heading
+		color: #1D1E1F
+		font-family: "HelveticaNeueLTPro"
+		font-size: 34px
+		text-align: center
+		margin-top: 10px
+	&__subheading
+		margin-top: 10px
+		color: #898888
+		font-family: "Merriweather-LightItalic"
+		font-size: 16px
+		text-align: center
+	&__name
+		font-family: "HelveticaNeueLTPro"
+		font-size: 24px
+		color: #464646
+	&__worker
+		color: #B3B3B3
+		font-family: "HelveticaNeueLTPro"
+		font-weight: 500
+		font-size: 13px
+	&__photo
+		border-radius: 50%
+	&__icons-tw
+		@extend .icon-twitter
+		display: inline-block
+		margin-right: 5px
+	&__icons-in
+		@extend .icon-instagram
+		display: inline-block
+
+
+.provide
+	min-height: 1600px
+	background-color: #181818
+	transform: skewY(-7deg)
+	position: relative
+	top: 150px
+	&__wrapper
+		@extend %wrapper
+		position: relative
+		transform: skewY(7deg)
+		top: 300px
+		text-align: center
+	&__heading
+		color: #FFF
+		font-family: "HelveticaNeueLTPro"
+		font-size: 34px
+	&__subheading
+		color: #777
+		font-family: "Merriweather-LightItalic"
+		font-size: 16px
+	&__tile
+		margin-top: 220px
+		display: inline-block
+		width: 33.12%
+		padding: 0 20px
+	&__tile-wrap
+		width: 175px
+		height: 175px
+		display: inline-block
+		border-radius: 50%
+		border: 2px solid white
+		position: relative
+	@each $s in analytics,heart,cloud
+		&__tile-icon--#{$s}
+			@extend .icon-#{$s}
+			display: inline-block
+			+ca
+	&__tile-heading
+		color: #FFF
+		font-family: "HelveticaNeueLTPro"
+		font-size: 26px
+	&__tile-text
+		color: #383838
+		font-family: "HelveticaNeueLTPro"
+		font-size: 18px
+	&__button-wrap
+		background-image: url(../img/provide-bg.png)
+		background-repeat: no-repeat
+		background-size: cover
+		background-position: bottom center
+		width: 50%
+		margin: 0 auto
+	&__btn
+		margin-top: 400px
+		width: 217px
+		height: 64px
+		background-color: #FFF
+		color: #000
+		font-family: "HelveticaNeueLTPro"
+		font-size: 16px
+		text-transform: uppercase
+		font-weight: bold
+		transition: 0.5s
+		&:hover
+			color: white
+			background-color: rgba(255,255,255,0)
+			outline: 2px solid white
+
+.contacts
+	position: relative
+	top: 300px
+	&__wrapper
+		@extend %wrapper
+	&__heading
+		@extend .team__heading
+	&__subheading
+		@extend .team__subheading
+	&__tile-wrap
+		margin: 0 auto
+
+	&__tile
+		width: 33.12%
+		display: inline-block
+		position: relative
+		text-align: center
+		margin-bottom: 150px
+		margin-top: 60px
+	@each $s in phone,location,mail
+		&__icon--#{$s}
+			@extend .icon-#{$s}
+			display: inline-block
+			margin: 0 auto
+	&__text
+		color: #898888
+		font-family: "HelveticaNeueLTPro"
+		font-size: 12px
+	&__copyright
+		width: 100%
+		color: #3B3B3B
+		font-family: "HelveticaNeueLTPro"
+		font-size: 14px
+		text-align: center
+		margin-bottom: 60px
+
+	&__form
+		max-width: 770px
+		margin: 0 auto 150px auto
+	form
+		input
+			width: 100%
+			background-color: transparent
+			border: 1px solid #999
+			display: block
+			height: 50px
+			margin-bottom: 20px
+			text-indent: 15px
+			color: #898888
+			font-family: "HelveticaNeueLTPro"
+			font-size: 15px
+			font-weight: 300
+			@include placeholder
+				text-align: center
+		button
+			color: #FEFEFE
+			font-family: "HelveticaNeueLTPro"
+			font-size: 17px
+			width: 100%
+			height: 52px
+			background-color: #161616

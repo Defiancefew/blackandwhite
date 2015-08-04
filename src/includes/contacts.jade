@@ -1,0 +1,24 @@
+section.contacts
+	.contacts__wrapper
+		.contacts__heading Contact Us
+		.contacts__subheading We know what we need to do
+		.contacts__tile-wrap
+			.contacts__tile
+				i.contacts__icon--phone
+				.contacts__text 555-222-333
+			.contacts__tile
+				i.contacts__icon--location
+				.contacts__text Here is some address
+			.contacts__tile
+				i.contacts__icon--mail
+				.contacts__text somemail@hotmail.com
+
+		.contacts__form
+			form(method="get")
+				input(type="text" placeholder="Full Name" required)
+				input(type="email" placeholder="Email" required)
+				input(type="tel" placeholder="Number" required)
+				input(type="textarea" placeholder="Write your message here.." cols="2" rows="10" required)
+				button(type="submit") Submit
+		.contacts__copyright
+			| Copyright &copy; Kenan Hamidic. All rights reserved.
